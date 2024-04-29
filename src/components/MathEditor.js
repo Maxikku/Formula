@@ -8,7 +8,7 @@ import AutocompleteSelect from "./AutocompleteSelect";
 import CalculatorButton from "./CalculatorButton";
 import CodeMirrorEditor from "./CodeMirrorEditor";
 import fetchAutocompleteData from "../api/fetch";
-import useMathEditorStore from "./useStore";
+import useMathEditorStore from "../store/store";
 
 
 const MathEditor = () => {
