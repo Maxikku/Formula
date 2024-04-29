@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import MathEditor from "./components/MathEditor";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const queryClient = new QueryClient();
+
+const App = () => (
+    <QueryClientProvider client={queryClient}>
+        <div>
+            <h1>Formula</h1>
+            <MathEditor />
+        </div>
+    </QueryClientProvider>
+);
 
 export default App;
